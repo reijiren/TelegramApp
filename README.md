@@ -128,7 +128,7 @@ Contributions are what make the open source community such an amazing place to b
 
 <!-- RELATED PROJECT -->
 ## Related Project
-Food Recipes RESTful API used in this application
+Telegram RESTful API used in this application
 * [Telegram API](https://github.com/reijiren/TelegramAPI)
 
 
