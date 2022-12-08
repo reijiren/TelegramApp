@@ -82,7 +82,7 @@ Telegram is a realtime chat application. Users are able to find other user conta
 
 ### Built With
 
-* [React JS](https://nodejs.org/en/docs/)
+* [React JS](https://reactjs.org/)
 * [Bootstrap](https://getbootstrap.com/)
 * [Axios](https://axios-http.com/)
 * [Redux](https://redux.js.org/)
