@@ -6,7 +6,7 @@
     <image align="center" width="400" src='./public/telegram_logo.png' />
   </p>
   <p align="center">
-    <a href="#">View Demo</a>
+    <a href="https://telegram-rhefrz.vercel.app">View Demo</a>
   </p>
 </p>
 
@@ -36,7 +36,7 @@ Telegram is a realtime chat application. Users are able to find other user conta
 
 ### Project Structure
 ```
-|── TelegramAPP
+|── TelegramApp
    |── public            # Public Assets
    |── screenshot        # Screenshots of the application
    |── src               # Project source code
