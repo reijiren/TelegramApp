@@ -35,7 +35,9 @@ export default function ChatRoom() {
 
     useEffect(() => {
         const socket = io(process.env.REACT_APP_BACKEND_URL)
-        socket.emit('join-room', sender.id_user);
+        if(receiver?.length !== 0){
+            socket.emit('join-room', sender.id_user);
+        }
 
         socket.on('send-message-response', (res) => {
             dispatch(setChat(res));
