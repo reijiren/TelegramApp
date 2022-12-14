@@ -14,6 +14,8 @@ export default function chatReducer(state = initialState, action){
             return { ...state, isLoading: true, isError: false };
         case "FETCH_CHAT_LIST_REJECTED":
             return { ...state, isLoading: false, isError: true };
+        case "FETCH_CHAT_LIST_FULFILLED":
+            return { ...state, isLoading: false, isError: false };
         default:
             return state;
     }

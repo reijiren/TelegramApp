@@ -43,6 +43,13 @@ export default function userReducer(state = initialState, action){
                 isError: false,
                 user: action.payload.data.data[0],
             }
+        case "UPDATE_IMG_FULFILLED":
+            return {
+                ...state,
+                isLoading: false,
+                isError: false,
+                user: action.payload.data.data[0],
+            }
         case "RESET_USER":
             return {
                 ...state,

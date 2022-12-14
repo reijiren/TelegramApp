@@ -34,12 +34,16 @@ export default function Profile() {
 
             const handleSuccess = (data) => {
                 console.log(data);
+                window.location.reload();
             }
             dispatch(updateUserImg(form.id_user, data, handleSuccess))
         }
 
         const handleSuccess = (data) => {
-            alert(data.message)
+            alert(data.message);
+            if(!image) {
+                window.location.reload();
+            }
         }
         dispatch(updateUser(form, handleSuccess));
 
@@ -49,7 +53,7 @@ export default function Profile() {
     return(
         <div className="d-flex flex-column">
             <div className="d-flex flex-column my-4 align-items-center">
-                <img src={`${process.env.REACT_APP_BACKEND_URL}/${user.image}`} height={100} width={100} className="rounded-circle mb-2" />
+                <img src={`${user.image?.split('|&&|')[0]}`} height={100} width={100} className="rounded-circle mb-2" />
                 <h4><b>{user.fullname}</b></h4>
                 <div>{user.username || "- no username -"}</div>
             </div>

@@ -3,7 +3,10 @@
 
   <h3 align="center">Telegram</h3>
   <p align="center">
-    <image align="center" width="200" src='./assets/' />
+    <image align="center" width="400" src='./public/telegram_logo.png' />
+  </p>
+  <p align="center">
+    <a href="#">View Demo</a>
   </p>
 </p>
 
@@ -13,8 +16,9 @@
 ## Table of Contents
 
 * [About the Project](#about-the-project)
+  * [Project Structure](#project-structure)
   * [Screenshots](#screenshots)
-  * [Built With](#built-with)
+  * [Package Modules](#package-modules)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
@@ -29,6 +33,21 @@
 
 Telegram is a realtime chat application. Users are able to find other user contacts and send messages and files to them. Users might take a look at their profile information, such as bio, email and photo profile.
 
+
+### Project Structure
+```
+|── TelegramAPP
+   |── public            # Public Assets
+   |── screenshot        # Screenshots of the application
+   |── src               # Project source code
+       |── components    # Application components
+       |── pages         # Pages source code
+       |── redux         # State management
+       |── router        # Endpoint
+   |── .env              # Environment variables   
+   |── .gitignore        # Files that should be ignored
+   |── README.md         # Readme
+```
 
 ### Screenshots
 <details>
@@ -80,13 +99,25 @@ Telegram is a realtime chat application. Users are able to find other user conta
 <img src="/screenshot/profile_setting 2.png" alt="profile setting 2" />
 </details>
 
-### Built With
+<details>
+  <summary>
+    Other User's Profile
+  </summary>
+<img src="/screenshot/other_profile.png" alt="other profile" />
+</details>
 
-* [React JS](https://nodejs.org/en/docs/)
+### Package Modules
+
+Below are lists of modules used in this application:
+
+* [React JS](https://reactjs.org/)
 * [Bootstrap](https://getbootstrap.com/)
 * [Axios](https://axios-http.com/)
 * [Redux](https://redux.js.org/)
+* [Dotenv](https://www.npmjs.com/package/dotenv)
 * [Socket.io Client](https://socket.io/docs/v4/client-api/)
+* [Reactstrap](https://reactstrap.github.io)
+* [FontAwesome](https://fontawesome.com)
 
 
 <!-- GETTING STARTED -->
@@ -128,7 +159,6 @@ Contributions are what make the open source community such an amazing place to b
 
 <!-- RELATED PROJECT -->
 ## Related Project
-Telegram RESTful API used in this application
-* [Telegram API](https://github.com/reijiren/TelegramAPI)
-
+[Telegram RESTful API](https://telegramapi-rhefrz.up.railway.app) is used in this application.
+* [View API Documentation](https://github.com/reijiren/TelegramAPI)
 

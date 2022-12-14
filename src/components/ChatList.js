@@ -76,7 +76,7 @@ export default function ChatList() {
                 <div className="d-flex flex-row justify-content-between align-items-center text-blue">
                     <h3><b>Telegram</b></h3>
                     <Dropdown toggle={toggle} isOpen={dropdownOpen}>
-                        <DropdownToggle className="p-1"><img src={`${process.env.REACT_APP_BACKEND_URL}/${user.image}`} className="rounded-circle" width={30} height={30} alt="" /></DropdownToggle>
+                        <DropdownToggle className="p-1"><img src={`${user.image?.split('|&&|')[0]}`} className="rounded-circle" width={30} height={30} alt="" /></DropdownToggle>
                         <DropdownMenu id="dropdown-nav" end>
                             <DropdownItem id="dropdown-item" onClick={toggleProfile}><FontAwesomeIcon icon={faCog} />Settings</DropdownItem>
                             <DropdownItem id="dropdown-item"><FontAwesomeIcon icon={faUser} />Contacts</DropdownItem>
@@ -107,17 +107,16 @@ export default function ChatList() {
                         ) :
                         listContact.map((e, i) => (
                             <div key={i} onClick={() => select(e)} className="d-flex flex-row align-items-center py-1 px-1" id="chat">
-                                <img src={`${process.env.REACT_APP_BACKEND_URL}/${e.image}`} className="rounded-circle img-fit mr-3" width={50} height={50} alt="" />
+                                <img src={`${e.image?.split('|&&|')[0]}`} className="rounded-circle img-fit mr-3" width={50} height={50} alt="" />
                                 <div className="d-flex flex-column justify-content-between chat-info">
                                     <div className="chat-name mb-1">{e.fullname}</div>
                                 </div>
                             </div>
                         )) :
                         listChat.length !== 0 ? 
-                        // listChat.map((e, i) => (
                         listChat.sort((a, b) => (a.id < b.id) ? 1 : ((b.id < a.id) ? -1 : 0)).map((e, i) => (
                             <div key={i} onClick={() => select(e)} className="d-flex flex-row justify-content-between align-items-center py-1 px-1" id="chat">
-                                <img src={`${process.env.REACT_APP_BACKEND_URL}/${e.image}`} className="rounded-circle img-fit" width={50} height={50} alt="" />
+                                <img src={`${e.image?.split('|&&|')[0]}`} className="rounded-circle img-fit" width={50} height={50} alt="" />
                                 <div className="d-flex flex-column justify-content-between chat-info">
                                     <div className="chat-name mb-1"><b>{e.name}</b></div>
                                     <div className="chat-name text-truncate">{e.chat_sender == user.id_user && 'Me: '}{e.content}</div>
